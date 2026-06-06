@@ -1,95 +1,96 @@
 # Generative Autoencoders AI – Autoencoders, VAEs & GANs
 
-![Generative Autoencoders AI](visuals/GenerativeAutoencodersAI.png)
+![GAN Generated Faces](visuals/GANGeneratedFaces.png)
 
 ## Author
 
 **Darious Brown**
 
-**GitHub:** https://github.com/Dare215  
-**LinkedIn:** https://www.linkedin.com/in/dariousbrown  
-**Portfolio:** https://dare215.github.io/DariousBrown-Portfolio/  
-**Email:** dariousbrown3@icloud.com  
+GitHub: https://github.com/Dare215
+LinkedIn: https://www.linkedin.com/in/dariousbrown
+Portfolio: https://dare215.github.io/DariousBrown-Portfolio/
+Email: [dariousbrown3@icloud.com](mailto:dariousbrown3@icloud.com)
 
 ---
 
 # Project Overview
 
-Generative Autoencoders AI explores deep learning image generation and reconstruction using Autoencoders, Variational Autoencoders (VAEs), and Generative Adversarial Networks (GANs).
+This project explores Generative Artificial Intelligence using Autoencoders, Variational Autoencoders (VAEs), and Generative Adversarial Networks (GANs). The objective is to investigate how neural networks learn compressed image representations and generate synthetic facial images from learned latent spaces.
 
-This project applies neural network architectures to facial image data to evaluate how deep learning models can compress, reconstruct, and generate new image representations.
+Using the CelebA facial image dataset, multiple deep learning architectures were implemented to perform image reconstruction, data augmentation, feature extraction, and image generation tasks.
 
-The project demonstrates foundational generative AI workflows including image preprocessing, latent space representation, reconstruction quality, and synthetic image generation.
+The project demonstrates practical applications of generative deep learning and computer vision while highlighting the strengths and limitations of different generative architectures.
 
 ---
 
 # Business Problem
 
-Generative AI models are increasingly used across industries for image synthesis, anomaly detection, compression, data augmentation, and representation learning.
+Generative AI is transforming industries including healthcare, cybersecurity, media, finance, and manufacturing. Organizations increasingly use generative models for:
 
-This project explores key questions:
+* Synthetic data generation
+* Data augmentation
+* Image reconstruction
+* Anomaly detection
+* Computer vision applications
+* Privacy-preserving AI workflows
 
-- Can neural networks learn compressed image representations?
-- How well can an autoencoder reconstruct facial images?
-- Can a VAE generate new image-like samples from latent vectors?
-- Can a GAN learn to produce synthetic face-like outputs?
-- How do generative models differ in reconstruction and image generation quality?
+This project evaluates how generative neural networks can learn meaningful image representations and generate realistic facial images from training data.
 
 ---
 
 # Dataset
 
-The project uses facial image data processed into 64x64 RGB image format.
+The project utilizes the CelebA facial image dataset.
 
-The workflow includes:
+Dataset preparation included:
 
-- Image loading
-- Image resizing
-- Normalization
-- Data augmentation
-- Training/test preparation
-- Latent space generation
+* Image resizing to 64x64 pixels
+* RGB image normalization
+* Data augmentation
+* Training and validation splits
+* Feature extraction and latent space generation
 
 ---
 
 # Methodology
 
-## Data Preparation
+## Data Preprocessing
 
-- Loaded facial image data
-- Resized images to 64x64
-- Normalized image pixel values
-- Applied augmentation techniques
-- Prepared image batches for model training
+* Loaded facial image dataset
+* Normalized pixel values
+* Resized images to fixed dimensions
+* Applied augmentation techniques
+* Prepared tensors for model training
 
-## Autoencoder Modeling
+## Autoencoder
 
-- Built an encoder-decoder architecture
-- Compressed facial images into latent representations
-- Reconstructed original images from learned encodings
-- Compared original vs reconstructed outputs
+Implemented an encoder-decoder architecture to compress images into latent representations and reconstruct the original images.
 
-## Variational Autoencoder Modeling
+## Variational Autoencoder (VAE)
 
-- Created latent distribution sampling
-- Generated new facial outputs from random latent vectors
-- Evaluated generative quality through visual inspection
+Implemented probabilistic latent-space modeling to generate new facial images from sampled latent vectors.
 
-## GAN Modeling
+## Generative Adversarial Network (GAN)
 
-- Built generator and discriminator models
-- Trained adversarial networks
-- Generated synthetic face-like image outputs
+Built a Generator and Discriminator network trained through adversarial learning to create synthetic facial images.
 
 ---
 
-# Visual Analysis
+# Visual Results
 
-## Generative AI Thumbnail
+## GAN Generated Faces
 
-![GAN Generated Faces](visuals/GenerativeAutoencodersAI.png)
+![GAN Generated Faces](visuals/GANGeneratedFaces.png)
 
-This visual shows GAN-generated facial image outputs and serves as the primary project thumbnail.
+This visualization demonstrates synthetic facial images generated by the GAN model after training. The Generator learned facial features directly from the training dataset and produced entirely new image samples.
+
+---
+
+## Autoencoder Architecture
+
+![Autoencoder Architecture](visuals/AutoencoderArchitecture.png)
+
+This figure illustrates the neural network architecture used during training, including convolutional layers, activation functions, dropout layers, and trainable parameters.
 
 ---
 
@@ -97,7 +98,7 @@ This visual shows GAN-generated facial image outputs and serves as the primary p
 
 ![CelebA Dataset Samples](visuals/CelebADatasetSamples.png)
 
-This visualization shows original and augmented facial image samples used during preprocessing.
+Examples of original facial images, augmented images, and associated pixel intensity distributions used during preprocessing and training.
 
 ---
 
@@ -105,93 +106,82 @@ This visualization shows original and augmented facial image samples used during
 
 ![Autoencoder Reconstructions](visuals/AutoencoderReconstructions.png)
 
-This visual compares original facial images against reconstructed images generated by the autoencoder.
-
----
-
-## VAE Generated Faces
-
-![VAE Generated Faces](visuals/VAEGeneratedFaces.png)
-
-This visualization shows new face-like images generated from random latent vectors using a Variational Autoencoder.
-
----
-
-## GAN Generated Faces
-
-![GAN Generated Faces](visuals/GANGeneratedFaces.png)
-
-This visualization demonstrates synthetic face-like outputs produced by the Generative Adversarial Network.
+Comparison between original facial images and reconstructed outputs generated by the autoencoder. The reconstructed images demonstrate how compressed latent representations preserve important facial features.
 
 ---
 
 # Key Findings
 
-- Autoencoders successfully learned compressed image representations.
-- Reconstructed images retained broad facial structure but lost fine detail.
-- VAEs generated blurred but face-like outputs from latent space sampling.
-- GAN outputs demonstrated generative behavior but required additional training for sharper quality.
-- The project demonstrates the practical differences between reconstruction-based and adversarial generative models.
+* Autoencoders successfully learned compressed facial image representations.
+* Reconstructed images retained major facial structures while sacrificing some fine detail.
+* GANs generated realistic facial patterns despite limited training epochs.
+* Data augmentation improved dataset diversity and model robustness.
+* Generative models successfully captured meaningful latent representations of facial features.
 
 ---
 
 # Skills Demonstrated
 
-## Deep Learning
+## Artificial Intelligence
 
-- Autoencoders
-- Variational Autoencoders
-- Generative Adversarial Networks
-- Latent Space Modeling
-- Neural Network Architecture Design
+* Generative AI
+* Deep Learning
+* Neural Networks
+* Representation Learning
 
 ## Computer Vision
 
-- Image Preprocessing
-- Image Reconstruction
-- Image Generation
-- Data Augmentation
+* Image Processing
+* Image Reconstruction
+* Image Generation
+* Data Augmentation
 
-## Python & AI Frameworks
+## Machine Learning
 
-- TensorFlow
-- Keras
-- NumPy
-- Pandas
-- Matplotlib
-- Scikit-Learn
+* Model Training
+* Hyperparameter Tuning
+* Feature Extraction
+* Performance Evaluation
+
+## Python Libraries
+
+* TensorFlow
+* Keras
+* NumPy
+* Pandas
+* Matplotlib
+* Scikit-Learn
 
 ---
 
 # Repository Structure
 
 ```text
-GenerativeAutoencodersAI/
+Autoencoders-Generative-Models/
 │
 ├── notebook/
 │   └── Autoencoders_Generative_Models.ipynb
 │
 ├── visuals/
-│   ├── GenerativeAutoencodersAI.png
+│   ├── GANGeneratedFaces.png
+│   ├── AutoencoderArchitecture.png
 │   ├── CelebADatasetSamples.png
-│   ├── AutoencoderReconstructions.png
-│   ├── VAEGeneratedFaces.png
-│   └── GANGeneratedFaces.png
+│   └── AutoencoderReconstructions.png
 │
-├── data/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
 ```
 
----
-
 # Installation
 
 ```bash
-git clone https://github.com/Dare215/GenerativeAutoencodersAI.git
-cd GenerativeAutoencodersAI
+git clone https://github.com/Dare215/Autoencoders-Generative-Models.git
+
+cd Autoencoders-Generative-Models
+
 pip install -r requirements.txt
+
 jupyter notebook
 ```
 
@@ -201,17 +191,14 @@ Open:
 notebook/Autoencoders_Generative_Models.ipynb
 ```
 
----
-
 # Future Improvements
 
-- Train models for additional epochs
-- Improve GAN image quality
-- Add FID score evaluation
-- Add reconstruction loss curves
-- Deploy image generation demo with Streamlit
-- Experiment with convolutional VAEs
-- Add hyperparameter tuning
+* Train GANs for additional epochs
+* Improve image sharpness and resolution
+* Implement convolutional VAEs
+* Add latent space visualization
+* Calculate reconstruction error metrics
+* Deploy a Streamlit-based image generation application
 
 ---
 
@@ -219,11 +206,28 @@ notebook/Autoencoders_Generative_Models.ipynb
 
 ## Darious Brown
 
-**PhD Candidate – Artificial Intelligence & Machine Learning**  
-**DBA Candidate**  
-**Data Scientist | Machine Learning Engineer | AI Researcher**
+PhD Candidate – Artificial Intelligence & Machine Learning
+
+DBA Candidate
+
+Data Scientist | Machine Learning Engineer | AI Researcher
 
 ### Professional Profiles
+
+GitHub: https://github.com/Dare215
+
+LinkedIn: https://www.linkedin.com/in/dariousbrown
+
+Portfolio: https://dare215.github.io/DariousBrown-Portfolio/
+
+Email: [dariousbrown3@icloud.com](mailto:dariousbrown3@icloud.com)
+
+---
+
+# License
+
+This repository is intended for educational, research, and portfolio demonstration purposes.
+
 
 **GitHub:** https://github.com/Dare215  
 **LinkedIn:** https://www.linkedin.com/in/dariousbrown  
